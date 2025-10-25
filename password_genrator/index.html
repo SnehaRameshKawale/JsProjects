@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -7,7 +8,34 @@
   <link href="/src/style.css" rel="stylesheet">
   <title>password_genrator</title>
 </head>
-<body>
-  <h1 class="text-orange-400">HIii</h1>
+
+<body class="flex justify-center items-center h-screen w-screen">
+  <div class="container border w-96 p-6">
+    <!-- Password will show here -->
+    <div class="inputdiv mb-4">
+      <input id="passwordInput" class=" border w-80 p-3" type="text" placeholder="Password will show here!">
+    </div>
+    <!-- genrate password Form -->
+    <div class="formdiv flex justify-center">
+      <form action="">
+        <div class="mb-3">
+          <input class="w-72" type="range" id="lengthRange" min="4" max="20" value="9">
+          <span id="lengthValue">9</span>
+        </div>
+        <div class="options space-y-2">
+          <label class="block" for="capital"><input type="checkbox" id="capital" checked> Capital Letters</label>
+          <label class="block" for="small"><input type="checkbox" id="small" > Small Letters</label>
+          <label class="block" for="numbers"><input type="checkbox" id="numbers" > Numbers</label>
+          <label class="block" for="symbols"><input type="checkbox" id="symbols" > Symbols</label>
+        </div>
+        <div class="buttondiv mt-2 flex justify-center">
+          <button class="border bg-gray-400 p-2 rounded-2xl  hover:shadow-gray-600 hover:shadow-xl" type="submit" id="genratebtn">Genrate Password</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
 </body>
+
 </html>
